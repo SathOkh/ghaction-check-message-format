@@ -27,4 +27,6 @@ jobs:
         with:
           pattern: '\[JIRA-[^\]]+\].+$'
           flags: 'gm'
+          checkAllCommitMessages: 'true' 
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
           error: 'Your first line has to contain a commit type like "[BUGFIX]".'
